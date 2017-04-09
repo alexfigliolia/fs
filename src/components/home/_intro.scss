@@ -1,0 +1,139 @@
+.intro{
+	@include center;
+	flex-direction: column;
+	width: 100%;
+	&>h1 {
+		font-family: "Medula One", sans-serif;
+		font-size: 1.4em;
+		letter-spacing: 3px;
+		font-weight: 100;
+		width: 70%;
+	}
+	&>.intro-container{
+		@include center;
+		flex-direction: column;
+		width: 100%;
+		@media #{$mq-800} {
+			background: url('../public/cooking.jpeg') no-repeat center;
+			background-size: cover;
+			width: 100%;
+			max-width: 950px;
+			height: 510px;
+			align-items: flex-start;
+			@include headerShadow;
+		}
+		&>img {
+			width: 100%;
+			height: auto;
+			max-width: 800px;
+			@media #{$mq-800} {
+				display: none;
+			}
+		}
+		&>.intro-text {
+			background: rgba(#fff, 0.9);
+			text-align: left;
+			width: 80%;
+			max-width: 500px;
+			padding: 0 10%;
+			position: relative;
+			top: -50px;
+			border-bottom: 1px solid #000;
+			@media #{$mq-800} {
+				top: 0;
+				width: 300px;
+				padding: 20px 40px;
+				border-bottom: none;
+				margin-left: 45px;
+				@include headerShadow;
+			}
+			@media #{$mq-957} {
+				transform: scaleX(0);
+				transform-origin: 0% 50%;
+				transition: transform 0.3s;
+				overflow: hidden;
+			}
+			&>h3 {
+				font-family: "Cantarell", sans-serif;
+				font-weight: 200;
+				letter-spacing: 2px;
+				font-size: 0.9em;
+				color: #000;
+				@media #{$mq-957} {
+					transform: translateX(-70px);
+					transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
+					opacity: 0;
+				}
+			}
+			&>h2 {
+				font-family: "Work Sans", sans-serif;
+				max-width: 300px;
+				margin-bottom: 0.5em;
+				@media #{$mq-957} {
+					transform: translateX(-70px);
+					transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
+					opacity: 0;
+				}
+			}
+			&>p {
+				font-family: "Work Sans", sans-serif;
+				margin-bottom: 1.5em;
+				font-size: 0.85em;
+				line-height: 1.8;
+				@media #{$mq-957} {
+					transform: translateX(-70px);
+					transition: transform 0.3s 0.4s, opacity 0.3s 0.4s;
+					opacity: 0;
+				}
+			}
+			&>button {
+				font-family: "Work Sans", sans-serif;
+				font-weight: bold;
+				font-size: 0.9em;
+				outline: none;
+				border: 1px solid #000;
+				width: 200px;
+				height: 50px;
+				background: transparent;
+				margin-bottom: 1.5em;
+				@media #{$mq-957} {
+					transform: translateX(-70px);
+					transition: transform 0.3s 0.5s, opacity 0.3s 0.5s;
+					opacity: 0;
+				}
+				&:hover{
+					background: #fff;
+				}
+			}
+		}
+		&>.intro-text-show {
+			@media #{$mq-957} {
+				transform: scaleX(1);
+			}
+			&>h3 {
+				@media #{$mq-957} {
+					transform: translateX(0px);
+					opacity: 1;
+				}
+			}
+			&>h2 {
+				@media #{$mq-957} {
+					transform: translateX(0px);
+					opacity: 1;
+				}
+			}
+			&>p {
+				@media #{$mq-957} {
+					transform: translateX(0px);
+					opacity: 1;
+				}
+			}
+			&>button {
+				@media #{$mq-957} {
+					transform: translateX(0px);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

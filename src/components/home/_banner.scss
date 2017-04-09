@@ -1,0 +1,59 @@
+.banner{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background: url('../public/rotw2.jpg') no-repeat center;
+	background-size: cover;
+	@include center;
+	@media #{$mq-957} {
+		background: none;
+	}
+	&>.center {
+		@include center;
+		@media #{$mq-957} {
+			display: none;
+		}
+		&>h1 {
+			position: relative;
+			color: #fff;
+			font-size: 10vh;
+			font-weight: 100;
+			font-family: 'Raleway', sans-serif;
+			text-shadow: 0px 0px 2.5px #000, 0px 0px 5px #000;
+			@media #{$mq-670} {
+				font-size: 14vh;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 10%;
+				width: 80%;
+				height: 3px;
+				background: #fff;
+			}
+		}
+	}
+}
+.vid {
+	display: none;
+	@media #{$mq-957} {
+		display: initial;
+		position: absolute;
+		z-index: -99;
+		width: 100%;
+		height: 100vh;
+		background: #fff;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		overflow: hidden;
+	}
+	&>iframe {
+		display: none;
+		@media #{$mq-957} {
+			display: initial;
+		}
+	}
+}

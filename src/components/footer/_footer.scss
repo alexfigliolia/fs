@@ -1,0 +1,83 @@
+footer {
+	height: 300px;
+	width: 100%;
+	@include center;
+	@media #{$mq-670} {
+		height: 250px;
+	}
+	&>div{
+		@include center;
+		flex-direction: column;
+		align-self: flex-end;
+		margin-bottom: 1em;
+		@media #{$mq-670} {
+			flex-direction: column-reverse;
+		}
+		&>.flinks {
+			width: 100%;
+			@include center;
+			flex-direction: column;
+			text-align: left;
+			@media #{$mq-670} {
+				flex-direction: row;
+			}
+			&>h2 {
+				font-family: 'Work Sans', sans-serif;
+				margin: 0.5em auto;
+				text-align: left;
+				font-size: 1em;
+				position: relative;
+				cursor: pointer;
+				&::after {
+					content: "//";
+					position: absolute;
+					top: 0;
+					left: -20px;
+					@media #{$mq-670}{
+						right: -20px;
+						left: auto;
+					}
+				}
+				@media #{$mq-670} {
+					margin: auto 2em;
+				}
+				@media #{$mq-800} {
+					margin: auto 2.5em;
+				}
+			}
+		}
+		&>.logo {
+			margin-bottom: 1em;
+			height: 80px;
+			@include center;
+			flex-direction: column;
+			cursor: pointer;
+			@media #{$mq-670} {
+				margin-bottom: auto;
+				margin-top: 1.5em;
+			}
+			@media #{$mq-800} {
+				height: 130px;
+				transition: height 0.4s;
+			}
+			&>img {
+				height: 70px;
+				width: 70px;
+				@media #{$mq-800} {
+					height: 90px;
+					width: 90px;
+					transition: height 0.4s, width 0.4s;
+				}
+			}
+			&>p{
+				font-family: "Cantarell", sans-serif;
+				font-size: 0.8em;
+				margin: 0;
+				@media #{$mq-800} {
+					font-size: 0.9em;
+					transition: font-size 0.4s;
+				}
+			}
+		}
+	}
+}

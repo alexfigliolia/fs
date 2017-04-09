@@ -1,0 +1,117 @@
+.header {
+	height: 55px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+	@include headerShadow;
+	z-index: 1000;
+	@include center;
+	transition: height 0.4s;
+	@media #{$mq-800} {
+		height: 130px;
+	}
+	&>div{
+		width: 100%;
+		@include center;
+		justify-content: space-between;
+		flex-direction: row;
+		text-align: center;
+		@media #{$mq-957} {
+			width: 80%;
+			max-width: 800px;
+		}
+		&>h2 {
+			display: none;
+			@media #{$mq-800} {
+				font-family: 'Work Sans', sans-serif;
+				text-transform: uppercase;
+				font-size: 0.9em;
+				width: 20%;
+				cursor: pointer;
+				font-weight: 700;
+				display: initial;
+				letter-spacing: 1px;
+				transition: font-size 0.4s;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 15%;
+					width: 0%;
+					height: 1px;
+					background: #000;
+					transition-duration: 0.3s;
+				}
+				&:hover::after {
+					width: 70%;
+				}
+			}
+		}
+		&>div {
+			height: 50px;
+			@include center;
+			flex-direction: column;
+			cursor: pointer;
+			margin-left: 5px;
+			@media #{$mq-800} {
+				margin-left: 0px;
+				width: 20%;
+				height: 130px;
+				transition: height 0.4s;
+			}
+			&>img {
+				height: 40px;
+				width: 40px;
+				@media #{$mq-800} {
+					height: 90px;
+					width: 90px;
+					transition: height 0.4s, width 0.4s;
+				}
+			}
+			&>p{
+				font-family: "Cantarell", sans-serif;
+				font-size: 0.5em;
+				margin: 0;
+				@media #{$mq-800} {
+					font-size: 0.9em;
+					transition: font-size 0.4s;
+				}
+			}
+		}
+	}
+}
+
+.header-shrink {
+	@media #{$mq-957} {
+		height: 70px;
+	}
+	&>div {
+		&>h2 {
+			@media #{$mq-957} {
+				font-size: 0.8em;
+				width: 20%;
+				letter-spacing: 1px;
+			}
+		}
+		&>div {
+			@media #{$mq-957} {
+				width: 20%;
+				height: 60px;
+			}
+			&>img {
+				@media #{$mq-957} {
+					height: 50px;
+					width: 50px;
+				}
+			}
+			&>p{
+				@media #{$mq-957} {
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+}
