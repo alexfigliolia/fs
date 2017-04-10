@@ -1,8 +1,13 @@
 {
-  "main.css": "static/css/main.c8d3052f.css",
-  "main.css.map": "static/css/main.c8d3052f.css.map",
-  "main.js": "static/js/main.56c2681b.js",
-  "main.js.map": "static/js/main.56c2681b.js.map",
+  "main.css": "static/css/main.021c6fc5.css",
+  "main.css.map": "static/css/main.021c6fc5.css.map",
+  "main.js": "static/js/main.cab4931b.js",
+  "main.js.map": "static/js/main.cab4931b.js.map",
   "static/media/cooking.jpeg": "static/media/cooking.af6ae204.jpeg",
-  "static/media/rotw2.jpg": "static/media/rotw2.d113ea20.jpg"
+  "static/media/down.svg": "static/media/down.82827f34.svg",
+  "static/media/ep_naturalblack.png": "static/media/ep_naturalblack.23e2b6cf.png",
+  "static/media/facebook.svg": "static/media/facebook.d9decf67.svg",
+  "static/media/instagram.svg": "static/media/instagram.c4e58de4.svg",
+  "static/media/rotw2.jpg": "static/media/rotw2.d113ea20.jpg",
+  "static/media/twitter.svg": "static/media/twitter.fb4c767c.svg"
 }
