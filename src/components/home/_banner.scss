@@ -10,18 +10,27 @@
 	}
 	&>.center {
 		@include center;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 10vh;
+		@media #{$mq-670} {
+			margin-top: 20vh;
+		}
 		@media #{$mq-957} {
 			display: none;
 		}
 		&>h1 {
 			position: relative;
 			color: #fff;
-			font-size: 10vh;
-			font-weight: 100;
-			font-family: 'Raleway', sans-serif;
-			text-shadow: 0px 0px 2.5px #000, 0px 0px 5px #000;
+			font-size: 6vh;
+			text-transform: uppercase;
+			font-weight: 900;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+			text-shadow: 0px 0px 2.5px #000, 0px 0px 5px #000, 0px 0px 7.5px #000;
 			@media #{$mq-670} {
-				font-size: 14vh;
+				font-size: 8vh;
+				text-shadow: 0px 0px 2.5px #000, 0px 0px 5px #000, 0px 0px 7.5px #000, 0px 0px 10px #000;
 			}
 			&::after {
 				content: "";
@@ -32,6 +41,29 @@
 				height: 3px;
 				background: #fff;
 			}
+		}
+		&>h2 {
+			color: #fff;
+			font-family: 'Work Sans', sans-serif;
+			text-shadow: 0px 0px 2.5px #000, 0px 0px 5px #000, 0px 0px 7.5px #000, 0px 0px 10px #000;
+			font-size: 3.5vh;
+			font-weight: 500;
+			margin: 0;
+			width: 90%;
+			@media #{$mq-670} {
+				font-size: 4vh;
+			}
+		}
+		&>button {
+			height: 65px;
+			width: 65px;
+			border: none;
+			border-radius: 50%;
+			@include headerShadow;
+			margin-top: 17.5vh;
+			@include center;
+			background: #E72924 url('../public/down.svg') no-repeat center;
+			background-size: 60% 60%;
 		}
 	}
 }

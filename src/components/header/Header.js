@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Burger from './Burger.js';
 
 class Header extends Component {
   render() {
@@ -13,6 +14,7 @@ class Header extends Component {
           </div>
           <h2>Clients</h2>
           <h2>Contact</h2>
+          <Burger classes={this.props.burgerStuff} burger={this.props.burger} />
         </div>
       </header>
     );

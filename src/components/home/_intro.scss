@@ -33,7 +33,7 @@
 		&>.intro-text {
 			background: rgba(#fff, 0.9);
 			text-align: left;
-			width: 80%;
+			width: 100%;
 			max-width: 500px;
 			padding: 0 10%;
 			position: relative;
@@ -41,7 +41,7 @@
 			border-bottom: 1px solid #000;
 			@media #{$mq-800} {
 				top: 0;
-				width: 300px;
+				width: 380px;
 				padding: 20px 40px;
 				border-bottom: none;
 				margin-left: 45px;
@@ -96,13 +96,16 @@
 				height: 50px;
 				background: transparent;
 				margin-bottom: 1.5em;
+				transition: background 0.2s, color 0.2s, border 0.2s;
 				@media #{$mq-957} {
 					transform: translateX(-70px);
-					transition: transform 0.3s 0.5s, opacity 0.3s 0.5s;
+					transition: transform 0.3s 0.5s, opacity 0.3s 0.5s, background 0.2s, color 0.2s, border 0.2s;
 					opacity: 0;
 				}
 				&:hover{
-					background: #fff;
+					background: #E72924;
+					color: #fff;
+					border: 1px solid #E72924;
 				}
 			}
 		}
