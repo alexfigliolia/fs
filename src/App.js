@@ -5,6 +5,7 @@ import Home from './components/home/Home.js';
 import Footer from './components/footer/Footer.js';
 import Menu from './components/menu/Menu.js';
 import Recipes from './components/recipes/Recipes';
+import WhatWeDo from './components/whatWeDo/WhatWeDo';
 import './App.css';
 
 class App extends Component {
@@ -127,12 +128,16 @@ class App extends Component {
         <div id="pageBody">
             {
               (this.state.page === "Home") ? 
-                <Home /> 
+                <Home 
+                  nav={this.handleNavMobile.bind(this)} /> 
 
               : (this.state.page === "Recipes") ? 
                 <Recipes /> 
 
-              : <Home />
+              : (this.state.page === "WhatWeDo") ? 
+                <WhatWeDo /> 
+
+              : <WhatWeDo />
             }
         </div>
 

@@ -7,9 +7,27 @@
 		font-size: 1.4em;
 		letter-spacing: 3px;
 		font-weight: 100;
-		width: 70%;
 		@include center;
 		margin-top: 1.2em;
+		position: relative;
+		&::after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -40px;
+			width: 25px;
+			height: 1px;
+			background: #000;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -40px;
+			width: 25px;
+			height: 1px;
+			background: #000;
+		}
 	}
 	&>.video-grid{
 		width: 100%;
@@ -26,16 +44,19 @@
 		}
 		&>.video {
 			width: 100%;
+			margin-bottom: 15px;
 			@media #{$mq-670} {
 				width: 46%;
 				margin: auto 1%;
+				margin-bottom: 20px;
 			}
 			&>h2 {
 				font-family: "Roboto", sans-serif;
-				font-size: 16px;
+				font-size: 14px;
 				text-transform: uppercase;
-				letter-spacing: 2px;
+				letter-spacing: 4px;
 				text-align: center;
+				margin-bottom: 10px;
 			}
 			&>iframe{
 				width: 100%;

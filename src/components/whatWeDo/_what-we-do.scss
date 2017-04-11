@@ -1,0 +1,118 @@
+.what-we-do {
+	@include center;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin-top: 55px;
+	position: relative;
+	margin-bottom: 0;
+	@media #{$mq-670} {
+		margin-top: 130px;
+	}
+	&>.wwd-banner {
+		@include center;
+		position: relative;
+		max-width: 1100px;
+		@include headerShadow;
+		&>img {
+			width: 100%;
+		}
+		&>h1 {
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			position: absolute;
+			top: calc(50% - 2.5vh);
+			width: 100%;
+			text-align: center;
+			left: 0;
+			color: #fff;
+			font-size: 5vh;
+			margin: 0;
+			letter-spacing: 4px;
+			@media #{$mq-670}{
+				font-size: 8vh;
+				top: calc(50% - 4vh);
+			}
+			@media #{$mq-800}{
+				font-size: 10vh;
+				top: calc(50% - 5vh);
+			}
+			@media #{$mq-957}{
+				font-size: 14vh;
+				top: 35%;
+			}
+		}
+	}
+	&>.info-grid{
+		@include center;
+		width: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0;
+		max-width: 600px;
+		@media #{$mq-800} {
+			max-width: 1100px;
+		}
+		&>.grid-item{
+			@include center;
+			width: 100%;
+			flex-direction: column;
+			margin: 0;
+			@media #{$mq-800}{
+				width: 50%;
+			}
+			&>h2 {
+				font-family: "Roboto", sans-serif;
+				font-size: 3.5vh;
+				letter-spacing: 4px;
+				width: 90%;
+				margin: 2em auto 0.75em auto; 
+				@media #{$mq-800} {
+					font-size: 3vh;
+					margin: 0;
+					margin-bottom: 0.5em;
+				}
+			}
+			&>p{
+				font-family: "Work Sans", sans-serif;
+				width: 90%;
+				line-height: 1.75;
+				margin: 0;
+				margin-bottom: 20px;
+				@media #{$mq-800} {
+					font-size: 0.9em;
+					margin-top: 0.5em;
+					margin-bottom: auto;
+				}
+			}
+			&>p:last-of-type {
+				margin-bottom: 30px;
+				@media #{$mq-800} {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&>.grid-img img {
+			width: 100%;
+			@include headerShadow;
+		}
+		&>.gm2{
+			display: none;
+			@media #{$mq-800} {
+				display: initial;
+			}
+		}
+		&>.gm3{
+			@media #{$mq-800} {
+				display: none;
+			}
+		}
+		&>.gm4{
+			display: none;
+			@media #{$mq-800} {
+				display: initial;
+			}
+		}
+
+	}
+}

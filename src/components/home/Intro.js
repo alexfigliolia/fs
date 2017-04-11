@@ -11,7 +11,7 @@ class Intro extends Component {
 	      		<h3>//WHAT WE DO</h3>
 	      		<h2>WORKING WITH THE BEST OF THE BEST.</h2>
 	      		<p>We work with top restaurants, chefs, luxury cookware brands, food products and digital media companies on culinary and lifestyle projects.</p>
-	      		<button>LEARN MORE</button>
+	      		<button data-page='WhatWeDo' onClick={this.props.nav}>LEARN MORE</button>
 	      	</div>
       	</div>
       </div>

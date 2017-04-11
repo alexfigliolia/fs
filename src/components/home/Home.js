@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div className='home' id='home'>
         <Banner />
-        <Intro />
+        <Intro nav={this.props.nav} />
         <ImgGrid />
       </div>
     );

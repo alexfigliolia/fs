@@ -59,18 +59,18 @@ class ImgGrid extends Component {
           </div>
         </div>
         <h1>Our work has been viewed by hundreds of millions of people.</h1>
-        <div className='grid-container'>
-          <div>
-            <img src="shrimp.jpg" alt="food shot"/>
+        <div className="vid-grid">
+          <div className="video">            
+            <iframe src="https://www.youtube.com/embed/fgE4rBylIIQ" frameBorder="0" allowFullScreen></iframe>
           </div>
-          <div>
-            <img src="muscles.jpg" alt="food shot"/>
+          <div className="video">           
+            <iframe src="https://www.youtube.com/embed/kNswNkw5lNk" frameBorder="0" allowFullScreen></iframe>
           </div>
-          <div>
-            <img src="burito.jpg" alt="food shot"/>
+          <div className="video">
+            <iframe src="https://www.youtube.com/embed/9ZUxJzTulGk" frameBorder="0" allowFullScreen></iframe>
           </div>
-          <div>
-            <img src="lbeer.jpg" alt="food shot"/>
+          <div className="video">
+            <iframe src="https://www.youtube.com/embed/B-tCl34goJo" frameBorder="0" allowFullScreen></iframe>
           </div>
         </div>
       </div>
