@@ -3,6 +3,7 @@ import Header from './components/header/Header.js';
 import Home from './components/home/Home.js';
 import Footer from './components/footer/Footer.js';
 import Menu from './components/menu/Menu.js';
+import Recipes from './components/recipes/Recipes';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
       "burgerClasses" : "hamburglar is-open",
       "burgerToggle" : true,
       "menuClasses" : "menu",
-      "menuToggle" : true
+      "menuToggle" : true,
+      "page" : "Home"
     }
   }
 	
@@ -59,15 +61,54 @@ class App extends Component {
     }
   }
 
+  handleNav(e){
+    var p = e.target.dataset.page;
+    this.setState({
+      "page" : p
+    });
+    document.body.scrollTop = 0;
+  }
+
+  handleNavMobile(e){
+    var p = e.target.dataset.page;
+    this.setState({
+      "burgerToggle" : true,
+      "burgerClasses" : "hamburglar is-open",
+      "menuClasses" : "menu",
+      "menuToggle" : true,
+      "page" : p
+    });
+    document.body.scrollTop = 0;
+  }
+
   render() {
     return (
       <div className="App">
+
         <Header 
           burgerStuff={this.state.burgerClasses} 
-          burger={this.toggleBurger.bind(this)} />
-        <Home />
-        <Footer />
-        <Menu classes={this.state.menuClasses} />
+          burger={this.toggleBurger.bind(this)}
+          nav={this.handleNav.bind(this)} />
+
+        <div id="pageBody">
+            {
+              (this.state.page === "Home") ? 
+                <Home /> 
+
+              : (this.state.page === "Recipes") ? 
+                <Recipes /> 
+
+              : <Home />
+            }
+        </div>
+
+        <Footer 
+          nav={this.handleNav.bind(this)} />
+
+        <Menu 
+          classes={this.state.menuClasses}
+          nav={this.handleNavMobile.bind(this)} />
+
       </div>
     );
   }

@@ -21,6 +21,7 @@
 			height: 510px;
 			align-items: flex-start;
 			@include headerShadow;
+			margin-bottom: 10px;
 		}
 		&>img {
 			width: 100%;

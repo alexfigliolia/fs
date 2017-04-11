@@ -31,7 +31,7 @@ class ImgGrid extends Component {
             <img src="pan.jpg" alt="food shot"/>
           </div>
       	</div>
-        <h1>More from Instagram</h1>
+        <h1>More from <img src="insta.png" alt='see our instagram' /></h1>
         <div className='grid-container'>
           <div>
             <img src="shrimp.jpg" alt="food shot"/>

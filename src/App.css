@@ -404,19 +404,23 @@ th {
     font-weight: 700;
     display: initial;
     letter-spacing: 1px;
-    transition: font-size 0.4s;
+    transition: font-size 0.4s, transform 0.3s, color 0.3s;
     position: relative; }
   .header > div > h2::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 50%;
     width: 0%;
     height: 1px;
     background: #E72924;
     transition-duration: 0.3s; }
   .header > div > h2:hover::after {
-    width: 70%; } }
+    width: 70%;
+    left: 15%; }
+  .header > div > h2:hover {
+    color: #E72924;
+    transform: scale(1.1); } }
 
 .header > div > div {
   height: 50px;
@@ -637,6 +641,7 @@ $scale: 0.8; // icon scale 68/68 default
   height: 65px;
   width: 65px;
   border: none;
+  outline: none;
   border-radius: 50%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin-top: 17.5vh;
@@ -699,7 +704,8 @@ $scale: 0.8; // icon scale 68/68 default
     max-width: 950px;
     height: 510px;
     align-items: flex-start;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); } }
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-bottom: 10px; } }
 
 .intro > .intro-container > img {
   width: 100%;
@@ -835,7 +841,18 @@ $scale: 0.8; // icon scale 68/68 default
   font-size: 1.4em;
   letter-spacing: 3px;
   font-weight: 100;
-  width: 70%; }
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.img-grid > h1 > img {
+  height: 1.4em;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -3.5px;
+  margin-left: 3.5px;
+  cursor: pointer; }
 
 .img-grid > .grid-container {
   display: flex;
@@ -917,9 +934,11 @@ $scale: 0.8; // icon scale 68/68 default
 footer {
   height: 300px;
   width: 100%;
+  background: url("../public/crossword.png") repeat center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 40px; }
 
 @media (min-width: 670px) {
   footer {
@@ -1018,7 +1037,7 @@ footer > div > .logo > p {
 .menu {
   height: calc(100% - 55px);
   width: 100%;
-  background: url("../public/ep_naturalblack.png") repeat;
+  background: url("../public/ep_naturalblack.png") repeat center;
   position: fixed;
   top: 55px;
   left: 0;
@@ -1048,7 +1067,22 @@ footer > div > .logo > p {
   transform: translateY(-100px);
   transition-duration: 0.2s;
   opacity: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
+
+.menu > div > h2::after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  background: #fff;
+  transition-duration: 0.25s; }
+
+.menu > div > h2:hover::after {
+  width: 120%;
+  left: -10%; }
 
 .menu > div > h2:nth-of-type(1) {
   transition-delay: 0s; }
@@ -1061,6 +1095,15 @@ footer > div > .logo > p {
 
 .menu > div > h2:nth-of-type(4) {
   transition-delay: 0.15s; }
+
+.menu > div > .onpage::after {
+  content: "";
+  height: 1px;
+  width: 120%;
+  position: absolute;
+  bottom: 0%;
+  left: -10%;
+  background: #fff; }
 
 .menu > div > div {
   width: 100%;
@@ -1132,6 +1175,108 @@ footer > div > .logo > p {
 
 .menu-show > div > div > .instagram {
   transition-delay: 0.2s; }
+
+.recipes-banner {
+  width: 100%;
+  height: auto;
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+@media (min-width: 670px) {
+  .recipes-banner {
+    margin-top: 130px; } }
+
+.recipes-banner > img {
+  width: 100%; }
+
+.recipes-banner > h1 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 3.5vh;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 10px; }
+
+@media (min-width: 550px) {
+  .recipes-banner > h1 {
+    font-size: 6vh;
+    margin: 0;
+    margin-top: 10px; } }
+
+@media (min-width: 670px) {
+  .recipes-banner > h1 {
+    font-size: 7vh;
+    letter-spacing: 6px; } }
+
+@media (min-width: 957px) {
+  .recipes-banner > h1 {
+    font-size: 10vh;
+    letter-spacing: 8px; } }
+
+.recipes-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.recipes-grid > h1 {
+  font-family: "Medula One", sans-serif;
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  font-weight: 100;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2em; }
+
+.recipes-grid > .video-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: 1000px; }
+
+@media (min-width: 550px) {
+  .recipes-grid > .video-grid {
+    width: 90%; } }
+
+@media (min-width: 670px) {
+  .recipes-grid > .video-grid {
+    width: 100%; } }
+
+.recipes-grid > .video-grid > .video {
+  width: 100%; }
+
+@media (min-width: 670px) {
+  .recipes-grid > .video-grid > .video {
+    width: 46%;
+    margin: auto 1%; } }
+
+.recipes-grid > .video-grid > .video > h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.recipes-grid > .video-grid > .video > iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+@media (min-width: 550px) {
+  .recipes-grid > .video-grid > .video > iframe {
+    height: 300px; } }
 
 body {
   margin: 0;

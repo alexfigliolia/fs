@@ -5,7 +5,7 @@ class Menu extends Component {
     return (
       <div className={this.props.classes} id='menu'>
         <div>
-          <h2>Recipes</h2>
+          <h2 data-page="Recipes" onClick={this.props.nav}>Recipes</h2>
           <h2>What We Do</h2>
           <h2>Clients</h2>
           <h2>Contact</h2>

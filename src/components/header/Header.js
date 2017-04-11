@@ -6,9 +6,9 @@ class Header extends Component {
     return (
       <header className="header" id='header'>
         <div>
-          <h2>Recipes</h2>
+          <h2 data-page='Recipes' onClick={this.props.nav}>Recipes</h2>
           <h2>What We Do</h2>
-          <div id='logo'>
+          <div id='logo' data-page='Home' onClick={this.props.nav}>
             <img src='fs.png' alt='logo' />
             <p>FOOD STEEZ</p>
           </div>
