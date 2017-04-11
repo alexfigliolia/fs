@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from './components/loader/Loader.js';
 import Header from './components/header/Header.js';
 import Home from './components/home/Home.js';
 import Footer from './components/footer/Footer.js';
@@ -14,7 +15,8 @@ class App extends Component {
       "burgerToggle" : true,
       "menuClasses" : "menu",
       "menuToggle" : true,
-      "page" : "Home"
+      "loaderClasses" : "loader",
+      "page" : "Recipes"
     }
   }
 	
@@ -32,6 +34,11 @@ class App extends Component {
   }
 
   componentDidMount() {
+    setTimeout(function(){
+      this.setState({
+        "loaderClasses" : "loader loader-hide"
+      });
+    }.bind(this), 500);
     if(window.innerWidth > 956){
       window.addEventListener('scroll', this.handleScroll);
     }
@@ -64,9 +71,19 @@ class App extends Component {
   handleNav(e){
     var p = e.target.dataset.page;
     this.setState({
-      "page" : p
+      "loaderClasses" : "loader"
     });
-    document.body.scrollTop = 0;
+    setTimeout(function(){
+      this.setState({
+        "page" : p
+      });
+      document.body.scrollTop = 0;
+    }.bind(this), 400);
+    setTimeout(function(){
+      this.setState({
+        "loaderClasses" : "loader loader-hide"
+      });
+    }.bind(this), 1000);
   }
 
   handleNavMobile(e){
@@ -75,15 +92,32 @@ class App extends Component {
       "burgerToggle" : true,
       "burgerClasses" : "hamburglar is-open",
       "menuClasses" : "menu",
-      "menuToggle" : true,
-      "page" : p
+      "menuToggle" : true
     });
-    document.body.scrollTop = 0;
+    setTimeout(function(){
+      this.setState({
+        "loaderClasses" : "loader"
+      });
+    }.bind(this), 700);
+    setTimeout(function(){
+      this.setState({
+        "page" : p
+      });
+      document.body.scrollTop = 0;
+    }.bind(this), 1100);
+    setTimeout(function(){
+      this.setState({
+        "loaderClasses" : "loader loader-hide"
+      });
+    }.bind(this), 2000);
   }
 
   render() {
     return (
       <div className="App">
+
+        <Loader 
+          classes={this.state.loaderClasses} />
 
         <Header 
           burgerStuff={this.state.burgerClasses} 

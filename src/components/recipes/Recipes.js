@@ -7,6 +7,9 @@ class Recipes extends Component {
     return (
       <div className="recipes" id='recipes'>
         <RecipesBanner />
+        <div className='scroll'>
+        	<button></button>
+        </div>
         <RecipesGrid />
       </div>
     );

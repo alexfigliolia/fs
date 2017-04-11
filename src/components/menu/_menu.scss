@@ -36,10 +36,10 @@
 				background: #fff;
 				transition-duration: 0.25s;
 			}
-			&:hover::after {
-				width: 120%;
-				left: -10%;
-			}
+			// &:hover::after {
+			// 	width: 120%;
+			// 	left: -10%;
+			// }
 		}
 		&>h2:nth-of-type(1) {
 			transition-delay: 0s;

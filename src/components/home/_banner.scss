@@ -50,6 +50,7 @@
 			font-weight: 500;
 			margin: 0;
 			width: 90%;
+			text-align: center;
 			@media #{$mq-670} {
 				font-size: 4vh;
 			}
@@ -65,9 +66,23 @@
 			@include center;
 			background: #E72924 url('../public/down.svg') no-repeat center;
 			background-size: 60% 60%;
+			animation: jump 1.5s infinite;
 		}
 	}
 }
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .vid {
 	display: none;
 	@media #{$mq-957} {

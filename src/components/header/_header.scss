@@ -6,7 +6,7 @@
 	left: 0;
 	background: #fff;
 	@include headerShadow;
-	z-index: 1000;
+	z-index: 10000000;
 	@include center;
 	transition: height 0.4s;
 	@media #{$mq-670} {

@@ -36,3 +36,32 @@
 		}
 	}
 }
+
+.scroll{
+	@include center;
+	height: 100px;
+	@media #{$mq-670}{
+		display: none;
+	}
+	&>button {
+		border: 1px solid #fff;
+		outline: none;
+		height: 50px;
+		width: 50px;
+		background: url('../public/downblack.svg') no-repeat center;
+		background-size: contain;
+		animation: jump 1.5s infinite;
+	}
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
