@@ -12,8 +12,8 @@ class Header extends Component {
             <img src='fs.png' alt='logo' data-page='Home' onClick={this.props.nav} />
             <p data-page='Home' onClick={this.props.nav}>FOOD STEEZ</p>
           </div>
-          <h2>Clients</h2>
-          <h2>Contact</h2>
+          <h2 data-page="Clients" onClick={this.props.nav}>Clients</h2>
+          <h2 data-page="Contact" onClick={this.props.nav}>Contact</h2>
           <Burger classes={this.props.burgerStuff} burger={this.props.burger} />
         </div>
       </header>

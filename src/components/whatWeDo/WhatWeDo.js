@@ -7,6 +7,9 @@ class WhatWeDo extends Component {
         <div className="wwd-banner">
           <img src="view.jpeg" alt='view' />
           <h1>What we do</h1>
+          <div className='but-contain'>
+            <button></button>
+          </div>
         </div>
         <div className="info-grid">
           <div className="grid-item">

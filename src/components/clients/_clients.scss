@@ -1,0 +1,38 @@
+.clients{
+	@include center;
+	margin-top: 100px;
+	width: 100%;
+	@media #{$mq-670} {
+		margin-top: 180px;
+	}
+	&>div{
+		@include center;
+		flex-direction: column;
+		&>h1{
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			font-size: 4vh;
+			letter-spacing: 4px;
+			margin-bottom: 2em;
+		}
+		&>.client-grid {
+			width: 100%;
+			@include center;
+			flex-wrap: wrap;
+			max-width: 1000px;
+			&>div {
+				width: 50%;
+				max-width: 200px;
+				height: 150px;
+				@include center;
+				overflow: hidden;
+				@media #{$mq-670} {
+					margin: 10px auto;
+				}
+				&>img {
+					width: 80%;
+				}
+			}
+		}
+	}
+}

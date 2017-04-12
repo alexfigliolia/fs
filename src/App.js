@@ -4,8 +4,10 @@ import Header from './components/header/Header.js';
 import Home from './components/home/Home.js';
 import Footer from './components/footer/Footer.js';
 import Menu from './components/menu/Menu.js';
-import Recipes from './components/recipes/Recipes';
-import WhatWeDo from './components/whatWeDo/WhatWeDo';
+import Recipes from './components/recipes/Recipes.js';
+import WhatWeDo from './components/whatWeDo/WhatWeDo.js';
+import Clients from './components/clients/Clients.js';
+import Contact from './components/contact/Contact.js';
 import './App.css';
 
 class App extends Component {
@@ -137,7 +139,10 @@ class App extends Component {
               : (this.state.page === "WhatWeDo") ? 
                 <WhatWeDo /> 
 
-              : <WhatWeDo />
+              : (this.state.page === "Clients") ? 
+                <Clients /> 
+
+              : <Contact />
             }
         </div>
 

@@ -12,8 +12,8 @@ class Footer extends Component {
           <div className='flinks'>
             <h2 data-page="Recipes" onClick={this.props.nav}>RECIPES</h2>
             <h2 data-page="WhatWeDo" onClick={this.props.nav}>WHAT WE DO</h2>
-            <h2>CLIENTS</h2>
-            <h2>CONTACT US</h2>
+            <h2 data-page="Clients" onClick={this.props.nav}>CLIENTS</h2>
+            <h2 data-page="Contact" onClick={this.props.nav}>CONTACT US</h2>
           </div>
         </div>
       </footer>
