@@ -1,6 +1,62 @@
 import React, { Component } from 'react';
 
 class Clients extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      "paths" : [
+        "clients/pb.png",
+        "clients/hardrock.png",
+        "clients/coachella.png",
+        "clients/thrillest.png",
+        "clients/miyabi.jpg",
+        "clients/WaldorfLogo.png",
+        "clients/deserttrip.png",
+        "clients/igloo.png",
+        "clients/ww.jpg",
+        "clients/staub.jpg",
+        "clients/hearst.png",
+        "clients/wolfgang.png",
+        "clients/zwilling.png",
+        "clients/hellmanns.png",
+        "clients/lecreuset.png",
+        "clients/gv.png",
+        "clients/chang.jpg",
+        "clients/sweetfin.png",
+        "clients/strandhouse.jpg",
+        "clients/oscars.png",
+        "clients/wusthof.jpg",
+        "clients/estrella.png",
+        "clients/elited.jpg",
+        "clients/tatsu.jpg",
+        "clients/pono.png",
+        "clients/bestia.png",
+        "clients/kandc.png",
+        "clients/terrine.png",
+        "clients/adelaida.jpg",
+        "clients/pokeworks.png",
+        "clients/redo.png",
+        "clients/plancheck.png",
+        "clients/sambar.png",
+        "clients/mainland.png",
+        "clients/oitf.jpg",
+        "clients/rawberri.png",
+        "clients/aetus.png"
+      ]
+    }
+  }
+  componentDidMount(){
+    if(this.state.paths.length > 36) {
+      var i = 0;
+      for(var ref in this.refs) {
+        this.refs[ref].src = this.state.paths[i];
+        i++;
+      }
+      this.setState({
+        "paths" : ["loaded"]
+      });
+    }
+  }
   render() {
     return (
       <div className="clients" id='clients'>
@@ -8,115 +64,115 @@ class Clients extends Component {
           <h1>//Our Clientelle</h1>
           <div className='client-grid'>
             <div>
-              <img src="clients/pb.png" alt="" />
+              <img ref="img0" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/hardrock.png" alt="" />
+              <img ref="img1" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/coachella.png" alt="" />
+              <img ref="img2" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/thrillest.png" alt="" />
+              <img ref="img3" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/miyabi.jpg" alt="" />
+              <img ref="img4" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/WaldorfLogo.png" alt="" />
+              <img ref="img5" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/deserttrip.png" alt="" />
+              <img ref="img6" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/igloo.png" alt="" />
+              <img ref="img7" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/ww.jpg" alt="" />
+              <img ref="img8" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/staub.jpg" alt="" />
+              <img ref="img9" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/hearst.png" alt="" />
+              <img ref="img10" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/wolfgang.png" alt="" />
+              <img ref="img11" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/zwilling.png" alt="" />
+              <img ref="img12" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/hellmanns.png" alt="" />
+              <img ref="img13" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/lecreuset.png" alt="" />
+              <img ref="img14" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/gv.png" alt="" />
+              <img ref="img15" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/chang.jpg" alt="" />
+              <img ref="img16" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/sweetfin.png" alt="" />
+              <img ref="img17" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/strandhouse.jpg" alt="" />
+              <img ref="img18" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/oscars.png" alt="" />
+              <img ref="img19" alt="Food Steez client" />
             </div>
              <div>
-              <img src="clients/wusthof.jpg" alt="" />
+              <img ref="img20" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/estrella.png" alt="" />
+              <img ref="img21" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/elited.jpg" alt="" />
+              <img ref="img22" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/tatsu.jpg" alt="" />
+              <img ref="img23" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/pono.png" alt="" />
+              <img ref="img24" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/bestia.png" alt="" />
+              <img ref="img25" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/kandc.png" alt="" />
+              <img ref="img26" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/terrine.png" alt="" />
+              <img ref="img27" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/adelaida.jpg" alt="" />
+              <img ref="img28" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/pokeworks.png" alt="" />
+              <img ref="img29" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/redo.png" alt="" />
+              <img ref="img30" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/plancheck.png" alt="" />
+              <img ref="img31" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/sambar.png" alt="" />
+              <img ref="img32" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/mainland.png" alt="" />
+              <img ref="img33" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/oitf.jpg" alt="" />
+              <img ref="img34" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/rawberri.png" alt="" />
+              <img ref="img35" alt="Food Steez client" />
             </div>
             <div>
-              <img src="clients/aetus.png" alt="" />
+              <img ref="img36" alt="Food Steez client" />
             </div>
           </div>
         </div>

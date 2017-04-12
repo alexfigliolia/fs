@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
 
 class WhatWeDo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      "paths" : [
+        "view.jpeg",
+        "lbeer-large.jpg",
+        "pan-large.jpg",
+        "shrimp-large.jpg",
+        "shrimp-large.jpg",
+        "beer-large.jpg"
+      ]
+    }
+  }
+  componentDidMount(){
+    if(this.state.paths.length > 5) {
+      var i = 0;
+      for(var ref in this.refs) {
+        this.refs[ref].src = this.state.paths[i];
+        i++;
+      }
+      this.setState({
+        "paths" : ["loaded"]
+      });
+    }
+  }
   render() {
     return (
       <div className="what-we-do" id='whatWeDo'>
         <div className="wwd-banner">
-          <img src="view.jpeg" alt='view' />
+          <img ref="img0" alt='Food Steez' />
           <h1>What we do</h1>
           <div className='but-contain'>
             <button></button>
@@ -17,10 +42,10 @@ class WhatWeDo extends Component {
             <p>Food Steez is a social media influencer. Parallel to that, we are a digital agency with production capabilities. Our content is produced in-house. We have experience in multiple facets of production. From recipe content to documentary, lifestyle and commercial work, we've done it all.</p>
           </div>
           <div className="grid-item grid-img gm1">
-            <img src="lbeer-large.jpg" alt="flight beer" />
+            <img ref="img1" alt="Food Steez" />
           </div>
           <div className="grid-item grid-img gm2">
-            <img src="pan-large.jpg" alt="pan food" />
+            <img ref="img2" alt="Food Steez" />
           </div>
           <div className="grid-item">
             <h2>//WHY DIGITAL CONTENT?</h2>
@@ -29,7 +54,7 @@ class WhatWeDo extends Component {
             <p>Utilizing high quality digital content online is the new standard to increase brand exposure, customer engagement, customer experiences, inbound web traffic and brand loyalty.</p>
           </div>
           <div className="grid-item grid-img gm3">
-            <img src="shrimp-large.jpg" alt="shrimp" />
+            <img ref="img3" alt="Food Steez" />
           </div>
           <div className="grid-item">
             <h2>//WHY WORK WITH US?</h2>
@@ -37,10 +62,10 @@ class WhatWeDo extends Component {
             <p>On the Food Steez Facebook Page we generated 126,281,470 video views in 2016. We grew our following from a mere 25,596 followers to 550,460 followers in under 12 months. We understand what it takes not only to represent a quality brand, but to increase engagement as well.</p>
           </div>
           <div className="grid-item grid-img gm4">
-            <img src="shrimp-large.jpg" alt="shrimp" />
+            <img ref="img4" alt="Food Steez" />
           </div>
           <div className="grid-item grid-img gm5">
-            <img src="beer-large.jpg" alt="beer" />
+            <img ref="img5" alt="Food Steez" />
           </div>
           <div className="grid-item">
             <h2>//LEARN MORE</h2>

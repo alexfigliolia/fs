@@ -8,7 +8,12 @@ class Intro extends Component {
     }
   }
   componentDidMount(){
-    this.refs.img.src = this.state.path;
+    if(this.state.path !== "") {
+      this.refs.img.src = this.state.path;
+      this.setState({
+        "path" : ""
+      });
+    }
   }
   render() {
     return (
