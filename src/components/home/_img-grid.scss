@@ -2,6 +2,7 @@
 	@include center;
 	flex-direction: column;
 	margin-top: -40px;
+	font-family: "Cantarell", sans-serif;
 	@media #{$mq-800} {
 		margin-top: 0px;
 	}
@@ -31,7 +32,7 @@
 			@include center;
 			width: 50%;
 			max-width: 250px;
-			background: blue;
+			background: #000;
 			position: relative;
 			overflow: hidden;
 			@include headerShadow;
@@ -49,9 +50,11 @@
 
 			}
 			&>img {
+				color: #fff;
 				height: auto;
 				width: 100%;
 				transition-duration: 0.3s;
+				border: none;
 			}
 			&:hover img {
 				transform: scale(1.1);

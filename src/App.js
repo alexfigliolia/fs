@@ -131,7 +131,7 @@ class App extends Component {
             {
               (this.state.page === "Home") ? 
                 <Home 
-                  nav={this.handleNavMobile.bind(this)} /> 
+                  nav={this.handleNav.bind(this)} /> 
 
               : (this.state.page === "Recipes") ? 
                 <Recipes /> 
