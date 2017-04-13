@@ -24,7 +24,7 @@ class Banner extends Component {
         <div className='center'>
           <h1>A digital Agency</h1>
           <h2>Changing the way the world sees food</h2>
-          <button></button>
+          <button onClick={this.props.scroll}></button>
         </div>
       </div>
     );

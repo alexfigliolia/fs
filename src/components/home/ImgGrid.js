@@ -44,56 +44,56 @@ class ImgGrid extends Component {
     return (
       <div className='img-grid' id='imgGrid'>
       	<h1>We are a team of creative individuals changing how the world sees food.</h1>
-      	<div className='grid-container'>
-          <div>
+      	<div className='grid-container' id='gc1'>
+          <div className="home-image1">
             <img ref="img0" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img1" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img2" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img3" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img4" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img5" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img6" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image1">
             <img ref="img7" alt="food steez"/>
           </div>
       	</div>
         <h1>More from <img src="insta.png" alt='see our instagram' /></h1>
         <div className='grid-container'>
-          <div>
+          <div className="home-image2">
             <img ref="img8" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img9" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img10" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img11" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img12" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img13" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img14" alt="food steez"/>
           </div>
-          <div>
+          <div className="home-image2">
             <img ref="img15" alt="food steez"/>
           </div>
         </div>

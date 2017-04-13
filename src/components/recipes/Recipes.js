@@ -8,7 +8,7 @@ class Recipes extends Component {
       <div className="recipes" id='recipes'>
         <RecipesBanner />
         <div className='scroll'>
-        	<button></button>
+        	<button id="rc" onClick={this.props.scroll}></button>
         </div>
         <RecipesGrid />
       </div>

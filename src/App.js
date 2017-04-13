@@ -23,22 +23,13 @@ class App extends Component {
     }
   }
 	
-  // handleHeaderScroll(){
-  // 	if(document.body.scrollTop > 100) {
-	 //    document.getElementById('header').classList.add('header-shrink');
-  // 	} else {
-	 //    document.getElementById('header').classList.remove('header-shrink');
-  // 	}
-  // }
-  // handleHomeScroll(){
-  //   if(this.state.page === "Home") {
-  //     if(document.body.scrollTop > document.getElementById('introText').scrollTop + 550) {
-  //       document.getElementById('introText').classList.add('intro-text-show');
-  //     } else {
-  //       document.getElementById('introText').classList.remove('intro-text-show');
-  //     }
-  //   }
-  // }
+  handleHeaderScroll(){
+  	if(document.body.scrollTop > 100) {
+	    document.getElementById('header').classList.add('header-shrink');
+  	} else {
+	    document.getElementById('header').classList.remove('header-shrink');
+  	}
+  }
 
   componentDidMount() {
     var self = this;
@@ -47,22 +38,20 @@ class App extends Component {
         "loaderClasses" : "loader loader-hide"
       });
     }, 500);
-    // if(window.innerWidth > 956){
-    //   window.addEventListener('scroll', function(){
-    //     self.handleHeaderScroll();
-    //     self.handleHomeScroll();
-    //   });
-    // }
+    if(window.innerWidth > 956){
+      window.addEventListener('scroll', function(){
+        self.handleHeaderScroll();
+      });
+    }
   }
 
-  // componentWillUnmount() {
-  //   if(window.innerWidth > 956){
-  //     window.removeEventListener('scroll', function(){
-  //       self.handleHeaderScroll();
-  //       self.handleHomeScroll();
-  //     });
-  //   }
-  // }
+  componentWillUnmount() {
+    if(window.innerWidth > 956){
+      window.removeEventListener('scroll', function(){
+        self.handleHeaderScroll();
+      });
+    }
+  }
 
    toggleBurger(){
     if(this.state.burgerToggle === true) {
@@ -126,6 +115,30 @@ class App extends Component {
     }.bind(this), 2000);
   }
 
+  homeButtonScroll(){
+    var o = document.getElementById('header').clientHeight;
+    var h = window.innerHeight - o;
+    scrollIt(
+      h,
+      300,
+      'easeOutQuad'
+    );
+  }
+  recipeButtonScroll(){
+    scrollIt(
+      document.getElementById('rc'),
+      300,
+      'easeOutQuad'
+    );
+  }
+  wButtonScroll(){
+    scrollIt(
+      document.getElementById('wwdb').clientHeight,
+      300,
+      'easeOutQuad'
+    );
+  }
+
   render() {
     return (
       <div className="App">
@@ -142,13 +155,16 @@ class App extends Component {
             {
               (this.state.page === "Home") ? 
                 <Home 
-                  nav={this.handleNav.bind(this)} /> 
+                  nav={this.handleNav.bind(this)}
+                  scroll={this.homeButtonScroll.bind(this)} /> 
 
               : (this.state.page === "Recipes") ? 
-                <Recipes /> 
+                <Recipes 
+                  scroll={this.recipeButtonScroll.bind(this)} /> 
 
               : (this.state.page === "WhatWeDo") ? 
-                <WhatWeDo /> 
+                <WhatWeDo
+                  scroll={this.wButtonScroll.bind(this)}  /> 
 
               : (this.state.page === "Clients") ? 
                 <Clients /> 
@@ -170,3 +186,82 @@ class App extends Component {
 }
 
 export default App;
+
+function scrollIt(destination, duration = 200, easing = 'linear', callback) {
+
+  const easings = {
+    linear(t) {
+      return t;
+    },
+    easeInQuad(t) {
+      return t * t;
+    },
+    easeOutQuad(t) {
+      return t * (2 - t);
+    },
+    easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    },
+    easeInCubic(t) {
+      return t * t * t;
+    },
+    easeOutCubic(t) {
+      return (--t) * t * t + 1;
+    },
+    easeInOutCubic(t) {
+      return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+    },
+    easeInQuart(t) {
+      return t * t * t * t;
+    },
+    easeOutQuart(t) {
+      return 1 - (--t) * t * t * t;
+    },
+    easeInOutQuart(t) {
+      return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+    },
+    easeInQuint(t) {
+      return t * t * t * t * t;
+    },
+    easeOutQuint(t) {
+      return 1 + (--t) * t * t * t * t;
+    },
+    easeInOutQuint(t) {
+      return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+    }
+  };
+
+  const start = window.pageYOffset;
+  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+  const documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+  const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+
+  if ('requestAnimationFrame' in window === false) {
+    window.scroll(0, destinationOffsetToScroll);
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+
+  function scroll() {
+    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+    const time = Math.min(1, ((now - startTime) / duration));
+    const timeFunction = easings[easing](time);
+    window.scroll(0, Math.ceil((timeFunction * (destinationOffsetToScroll - start)) + start));
+
+    if (window.pageYOffset === destinationOffsetToScroll) {
+      if (callback) {
+        callback();
+      }
+      return;
+    }
+
+    requestAnimationFrame(scroll);
+  }
+
+  scroll();
+}

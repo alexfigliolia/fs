@@ -49,44 +49,44 @@
 				margin-left: 45px;
 				@include headerShadow;
 			}
-			@media #{$mq-957} {
-				transform: scaleX(0);
-				transform-origin: 0% 50%;
-				transition: transform 0.3s;
-				overflow: hidden;
-			}
+			// @media #{$mq-957} {
+			// 	transform: scaleX(0);
+			// 	transform-origin: 0% 50%;
+			// 	transition: transform 0.3s;
+			// 	overflow: hidden;
+			// }
 			&>h3 {
 				font-family: "Cantarell", sans-serif;
 				font-weight: 200;
 				letter-spacing: 2px;
 				font-size: 0.9em;
 				color: #000;
-				@media #{$mq-957} {
-					transform: translateX(-70px);
-					transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
-					opacity: 0;
-				}
+				// @media #{$mq-957} {
+				// 	transform: translateX(-70px);
+				// 	transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
+				// 	opacity: 0;
+				// }
 			}
 			&>h2 {
 				font-family: "Work Sans", sans-serif;
 				max-width: 300px;
 				margin-bottom: 0.5em;
-				@media #{$mq-957} {
-					transform: translateX(-70px);
-					transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
-					opacity: 0;
-				}
+				// @media #{$mq-957} {
+				// 	transform: translateX(-70px);
+				// 	transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
+				// 	opacity: 0;
+				// }
 			}
 			&>p {
 				font-family: "Work Sans", sans-serif;
 				margin-bottom: 1.5em;
 				font-size: 0.85em;
 				line-height: 1.8;
-				@media #{$mq-957} {
-					transform: translateX(-70px);
-					transition: transform 0.3s 0.4s, opacity 0.3s 0.4s;
-					opacity: 0;
-				}
+				// @media #{$mq-957} {
+				// 	transform: translateX(-70px);
+				// 	transition: transform 0.3s 0.4s, opacity 0.3s 0.4s;
+				// 	opacity: 0;
+				// }
 			}
 			&>button {
 				font-family: "Work Sans", sans-serif;
@@ -99,11 +99,11 @@
 				background: transparent;
 				margin-bottom: 1.5em;
 				transition: background 0.2s, color 0.2s, border 0.2s;
-				@media #{$mq-957} {
-					transform: translateX(-70px);
-					transition: transform 0.3s 0.5s, opacity 0.3s 0.5s, background 0.2s, color 0.2s, border 0.2s;
-					opacity: 0;
-				}
+				// @media #{$mq-957} {
+				// 	transform: translateX(-70px);
+				// 	transition: transform 0.3s 0.5s, opacity 0.3s 0.5s, background 0.2s, color 0.2s, border 0.2s;
+				// 	opacity: 0;
+				// }
 				&:hover{
 					background: #E72924;
 					color: #fff;

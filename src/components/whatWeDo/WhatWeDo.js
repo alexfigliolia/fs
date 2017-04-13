@@ -29,11 +29,11 @@ class WhatWeDo extends Component {
   render() {
     return (
       <div className="what-we-do" id='whatWeDo'>
-        <div className="wwd-banner">
+        <div className="wwd-banner" id='wwdb'>
           <img ref="img0" alt='Food Steez' />
           <h1>What we do</h1>
           <div className='but-contain'>
-            <button></button>
+            <button onClick={this.props.scroll}></button>
           </div>
         </div>
         <div className="info-grid">

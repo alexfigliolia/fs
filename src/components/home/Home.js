@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className='home' id='home'>
-        <Banner />
+        <Banner scroll={this.props.scroll} />
         <Intro nav={this.props.nav} />
         <ImgGrid />
       </div>

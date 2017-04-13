@@ -28,7 +28,8 @@
 		flex-wrap: wrap;
 		width: 100%;
 		max-width: 950px;
-		&>div {
+		&>.home-image1,
+		&>.home-image2 {
 			@include center;
 			width: 50%;
 			max-width: 250px;
@@ -36,6 +37,7 @@
 			position: relative;
 			overflow: hidden;
 			@include headerShadow;
+			transition-duration: 0.3s;
 			@media #{$mq-550} {
 				width: 48%;
 				margin: 1%;
@@ -48,6 +50,10 @@
 				width: 22%;
 				margin: 1%;
 			}
+			// @media #{$mq-957} {
+			// 	transform: translateY(100px);
+			// 	opacity: 0;
+			// }
 			&>img {
 				color: #fff;
 				height: auto;
@@ -58,6 +64,10 @@
 			&:hover img {
 				transform: scale(1.1);
 			}
+		}
+		&>.home-image-show {
+			transform: translateY(0px);
+			opacity: 1;
 		}
 	}
 	&>.grid-container:last-of-type{
