@@ -9,6 +9,9 @@
 	@media #{$mq-670} {
 		margin-top: 130px;
 	}
+	@media #{$mq-800} {
+		margin-bottom: 40px;
+	}
 	&>.wwd-banner {
 		@include center;
 		position: relative;
