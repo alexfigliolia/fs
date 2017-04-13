@@ -86,14 +86,14 @@
 				background-size: 60% 60%;
 				transition-delay: 0.2s;
 			}
-			&>.twitter{
-				background: rgba(#fff, 0.85) url('../public/twitter.svg') no-repeat center;
-				background-size: 50% 50%;
-				transition-delay: 0.25s;
-			}
 			&>.instagram{
 				background: rgba(#fff, 0.85) url('../public/instagram.svg') no-repeat center;
 				background-size: 50% 50%;
+				transition-delay: 0.25s;
+			}
+			&>.youtube{
+				background: rgba(#fff, 0.85) url('../public/youtube.svg') no-repeat center;
+				background-size: 60% 60%;
 				transition-delay: 0.3s;
 			}
 		}
@@ -131,10 +131,10 @@
 			&>.facebook{
 				transition-delay: 0.3s;
 			}
-			&>.twitter{
+			&>.instagram{
 				transition-delay: 0.25s;
 			}
-			&>.instagram{
+			&>.youtube{
 				transition-delay: 0.2s;
 			}
 		}

@@ -28,6 +28,9 @@ class ImgGrid extends Component {
       ]
     }
   }
+  toInstagram(){
+    window.open("https://www.instagram.com/foodsteez/?hl=en", "_blank");
+  }
   componentDidMount(){
     if(this.state.paths.length > 19) {
       var i = 0;
@@ -70,7 +73,7 @@ class ImgGrid extends Component {
             <img ref="img7" alt="food steez"/>
           </div>
       	</div>
-        <h1>More from <img src="insta.png" alt='see our instagram' /></h1>
+        <h1 onClick={this.toInstagram.bind(this)}>More from <img src="insta.png" alt='see our instagram' /></h1>
         <div className='grid-container'>
           <div className="home-image2">
             <img ref="img8" alt="food steez"/>

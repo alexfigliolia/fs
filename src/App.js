@@ -4,6 +4,7 @@ import Header from './components/header/Header.js';
 import Home from './components/home/Home.js';
 import Footer from './components/footer/Footer.js';
 import Menu from './components/menu/Menu.js';
+import Socialize from './components/header/Socialize.js';
 import Recipes from './components/recipes/Recipes.js';
 import WhatWeDo from './components/whatWeDo/WhatWeDo.js';
 import Clients from './components/clients/Clients.js';
@@ -73,6 +74,13 @@ class App extends Component {
 
   handleNav(e){
     var p = e.target.dataset.page;
+    var l = document.getElementsByClassName('mmlink');
+    var h = document.getElementsByClassName('hlink');
+    for(var i = 0; i<4; i++) {
+      l[i].classList.remove('onpage');
+      h[i].classList.remove('onpage2');
+    }
+    e.target.classList.add('onpage2');
     this.setState({
       "loaderClasses" : "loader"
     });
@@ -91,6 +99,11 @@ class App extends Component {
 
   handleNavMobile(e){
     var p = e.target.dataset.page;
+    var l = document.getElementsByClassName('mmlink');
+    for(var i = 0; i<4; i++) {
+      l[i].classList.remove('onpage');
+    }
+    e.target.classList.add('onpage');
     this.setState({
       "burgerToggle" : true,
       "burgerClasses" : "hamburglar is-open",
@@ -179,6 +192,8 @@ class App extends Component {
         <Menu 
           classes={this.state.menuClasses}
           nav={this.handleNavMobile.bind(this)} />
+
+        <Socialize />
 
       </div>
     );

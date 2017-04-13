@@ -18,11 +18,12 @@
 		justify-content: space-between;
 		flex-direction: row;
 		text-align: center;
+		position: relative;
 		@media #{$mq-800} {
 			width: 80%;
 			max-width: 800px;
 		}
-		&>h2 {
+		&>.hlink {
 			display: none;
 			@media #{$mq-670} {
 				font-family: 'Work Sans', sans-serif;
@@ -55,7 +56,15 @@
 				}
 			}
 		}
-		&>div {
+		&>.onpage2{
+			color: #E72924;
+			transform: scale(1.1);
+			&::after {
+				width: 70%;
+				left: 15%;
+			}
+		}
+		&>#logo {
 			height: 50px;
 			@include center;
 			flex-direction: column;
@@ -107,7 +116,7 @@
 				letter-spacing: 1px;
 			}
 		}
-		&>div {
+		&>#logo {
 			@media #{$mq-957} {
 				width: 20%;
 				height: 60px;

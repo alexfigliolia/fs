@@ -514,18 +514,19 @@ th {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 @media (min-width: 800px) {
   .header > div {
     width: 80%;
     max-width: 800px; } }
 
-.header > div > h2 {
+.header > div > .hlink {
   display: none; }
 
 @media (min-width: 670px) {
-  .header > div > h2 {
+  .header > div > .hlink {
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     font-size: 0.9em;
@@ -536,7 +537,7 @@ th {
     letter-spacing: 1px;
     transition: font-size 0.4s, transform 0.3s, color 0.3s;
     position: relative; }
-  .header > div > h2::after {
+  .header > div > .hlink::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -545,14 +546,22 @@ th {
     height: 1px;
     background: #E72924;
     transition-duration: 0.3s; }
-  .header > div > h2:hover::after {
+  .header > div > .hlink:hover::after {
     width: 70%;
     left: 15%; }
-  .header > div > h2:hover {
+  .header > div > .hlink:hover {
     color: #E72924;
     transform: scale(1.1); } }
 
-.header > div > div {
+.header > div > .onpage2 {
+  color: #E72924;
+  transform: scale(1.1); }
+
+.header > div > .onpage2::after {
+  width: 70%;
+  left: 15%; }
+
+.header > div > #logo {
   height: 50px;
   display: flex;
   justify-content: center;
@@ -562,29 +571,29 @@ th {
   margin-left: 5px; }
 
 @media (min-width: 670px) {
-  .header > div > div {
+  .header > div > #logo {
     margin-left: 0px;
     width: 20%;
     height: 130px;
     transition: height 0.4s; } }
 
-.header > div > div > img {
+.header > div > #logo > img {
   height: 40px;
   width: 40px; }
 
 @media (min-width: 670px) {
-  .header > div > div > img {
+  .header > div > #logo > img {
     height: 90px;
     width: 90px;
     transition: height 0.4s, width 0.4s; } }
 
-.header > div > div > p {
+.header > div > #logo > p {
   font-family: "Cantarell", sans-serif;
   font-size: 0.5em;
   margin: 0; }
 
 @media (min-width: 670px) {
-  .header > div > div > p {
+  .header > div > #logo > p {
     font-size: 0.9em;
     transition: font-size 0.4s; } }
 
@@ -603,17 +612,17 @@ th {
     letter-spacing: 1px; } }
 
 @media (min-width: 957px) {
-  .header-shrink > div > div {
+  .header-shrink > div > #logo {
     width: 20%;
     height: 60px; } }
 
 @media (min-width: 957px) {
-  .header-shrink > div > div > img {
+  .header-shrink > div > #logo > img {
     height: 50px;
     width: 50px; } }
 
 @media (min-width: 957px) {
-  .header-shrink > div > div > p {
+  .header-shrink > div > #logo > p {
     font-size: 0.5em; } }
 
 /* $color: $darkred; // icon color
@@ -699,6 +708,49 @@ $scale: 0.8; // icon scale 68/68 default
 .hamburglar.is-closed #bottom1 {
   -webkit-transform: translateX(-4.5px) rotate(45deg);
   transform: translateX(-4.5px) rotate(45deg); }
+
+.socialize {
+  display: none; }
+
+@media (min-width: 670px) {
+  .socialize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: calc(50% - 60px);
+    right: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; } }
+
+.socialize > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 45px;
+  border: none;
+  outline: none;
+  transition-duration: 0.2s; }
+
+.socialize > button:hover {
+  transform: translateX(-5px); }
+
+.socialize > .bar-facebook {
+  background: #3B5998 url("../public/facebook-white.svg") no-repeat 37.5% 35%;
+  background-size: 60% 60%;
+  border-top-left-radius: 5px; }
+
+.socialize > .bar-instagram {
+  background: #7F47B7 url("../public/instagram-white.svg") no-repeat 50% 50%;
+  background-size: 50% 50%; }
+
+.socialize > .bar-youtube {
+  background: #DE2825 url("../public/youtube-white.svg") no-repeat 50% 50%;
+  background-size: 55% 55%;
+  border-bottom-left-radius: 5px; }
 
 .banner {
   height: 100vh;
@@ -1301,14 +1353,14 @@ footer > div > .logo > p {
   background-size: 60% 60%;
   transition-delay: 0.2s; }
 
-.menu > div > div > .twitter {
-  background: rgba(255, 255, 255, 0.85) url("../public/twitter.svg") no-repeat center;
-  background-size: 50% 50%;
-  transition-delay: 0.25s; }
-
 .menu > div > div > .instagram {
   background: rgba(255, 255, 255, 0.85) url("../public/instagram.svg") no-repeat center;
   background-size: 50% 50%;
+  transition-delay: 0.25s; }
+
+.menu > div > div > .youtube {
+  background: rgba(255, 255, 255, 0.85) url("../public/youtube.svg") no-repeat center;
+  background-size: 60% 60%;
   transition-delay: 0.3s; }
 
 .menu-show {
@@ -1341,10 +1393,10 @@ footer > div > .logo > p {
 .menu-show > div > div > .facebook {
   transition-delay: 0.3s; }
 
-.menu-show > div > div > .twitter {
+.menu-show > div > div > .instagram {
   transition-delay: 0.25s; }
 
-.menu-show > div > div > .instagram {
+.menu-show > div > div > .youtube {
   transition-delay: 0.2s; }
 
 .recipes-banner {
