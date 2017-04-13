@@ -4,7 +4,7 @@ class Intro extends Component {
   constructor(props){
     super(props);
     this.state = {
-      "path" : "cooking.jpeg"
+      "path" : "cooking-small.jpeg"
     }
   }
   componentDidMount(){
