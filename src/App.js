@@ -80,7 +80,12 @@ class App extends Component {
       l[i].classList.remove('onpage');
       h[i].classList.remove('onpage2');
     }
-    e.target.classList.add('onpage2');
+    if(e.target.tagName === "BUTTON"){
+      l[1].classList.add('onpage');
+      h[1].classList.add('onpage2');
+    } else {
+      e.target.classList.add('onpage2');
+    }
     this.setState({
       "loaderClasses" : "loader"
     });

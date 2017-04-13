@@ -7,7 +7,7 @@ class Loader extends Component {
         <div className='panel p1'></div>
         <div className='panel p2'></div>
         <div className='logo' data-page='Home' onClick={this.props.nav}>
-          <img src='fs.png' alt='logo' />
+          <img src='fs-white.png' alt='logo' />
           <p>FOOD STEEZ</p>
         </div>
       </div>
