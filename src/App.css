@@ -1425,8 +1425,11 @@ footer > div > .logo > p {
   justify-content: center;
   align-items: center;
   border-top: 2px solid #000;
-  max-width: 1000px;
-  margin: auto; }
+  max-width: 940px;
+  margin: auto;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+  box-sizing: border-box; }
 
 .tabs > button {
   border: none;

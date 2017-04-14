@@ -4,9 +4,18 @@ import RecipesGrid from './RecipesGrid.js';
 
 class Recipes extends Component {
   handleTabs(e){
-    var t = document.getElementsByClassName('tab');
+    var meal = e.target.dataset.text.toLowerCase(),
+        v = document.getElementsByClassName('video'),
+        t = document.getElementsByClassName('tab'),
+        m = document.getElementsByClassName(meal);
     for(var i = 0; i < 4; i++) {
       t[i].classList.remove('selected');
+    }
+    for(var j = 0; j < v.length; j++) {
+      v[j].style.display = 'none';
+    }
+    for(var k = 0; k < m.length; k++) {
+      m[k].style.display = 'block';
     }
     e.target.classList.add('selected');
   }

@@ -68,8 +68,11 @@
 	width: 100%;
 	@include center;
 	border-top: 2px solid #000;
-	max-width: 1000px;
+	max-width: 940px;
 	margin: auto;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+	box-sizing: border-box;
 	&>button {
 		border: none;
 		outline: none;
