@@ -156,7 +156,13 @@ class App extends Component {
       'easeOutQuad'
     );
   }
-
+  clientButtonScroll(){
+    scrollIt(
+      document.getElementById('cb'),
+      300,
+      'easeOutQuad'
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -185,7 +191,8 @@ class App extends Component {
                   scroll={this.wButtonScroll.bind(this)}  /> 
 
               : (this.state.page === "Clients") ? 
-                <Clients /> 
+                <Clients
+                  scroll={this.clientButtonScroll.bind(this)}  /> 
 
               : <Contact />
             }

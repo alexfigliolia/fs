@@ -2,6 +2,7 @@
 	@include center;
 	flex-direction: column;
 	width: 100%;
+	color: #2A2A2A;
 	&>h1 {
 		font-family: "Medula One", sans-serif;
 		font-size: 1.4em;
@@ -40,7 +41,7 @@
 			padding: 0 10%;
 			position: relative;
 			top: -50px;
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid #2A2A2A;
 			@media #{$mq-800} {
 				top: 0;
 				width: 380px;
@@ -60,7 +61,7 @@
 				font-weight: 200;
 				letter-spacing: 2px;
 				font-size: 0.9em;
-				color: #000;
+				color: #2A2A2A;
 				// @media #{$mq-957} {
 				// 	transform: translateX(-70px);
 				// 	transition: transform 0.3s 0.2s, opacity 0.3s 0.2s;
@@ -93,7 +94,7 @@
 				font-weight: bold;
 				font-size: 0.9em;
 				outline: none;
-				border: 1px solid #000;
+				border: 1px solid #2A2A2A;
 				width: 200px;
 				height: 50px;
 				background: transparent;

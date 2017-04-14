@@ -4,6 +4,7 @@
 	position: relative;
 	background: url('../public/rotw2.jpg') no-repeat center;
 	background-size: cover;
+	color: #2A2A2A;
 	@include center;
 	@media #{$mq-957} {
 		background: none;

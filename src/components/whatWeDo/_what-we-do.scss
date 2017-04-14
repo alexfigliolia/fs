@@ -90,6 +90,7 @@
 				font-family: "Roboto", sans-serif;
 				font-size: 3.5vh;
 				letter-spacing: 4px;
+				color: #2A2A2A;
 				width: 90%;
 				margin: 2em auto 0.75em auto; 
 				@media #{$mq-800} {
@@ -104,6 +105,7 @@
 				line-height: 1.75;
 				margin: 0;
 				margin-bottom: 20px;
+				color: #2A2A2A;
 				@media #{$mq-800} {
 					font-size: 0.9em;
 					margin-top: 0.5em;

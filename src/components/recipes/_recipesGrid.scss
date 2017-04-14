@@ -57,6 +57,7 @@
 				letter-spacing: 4px;
 				text-align: center;
 				margin-bottom: 10px;
+				color: #2A2A2A;
 			}
 			&>iframe{
 				width: 100%;
@@ -67,6 +68,11 @@
 					height: 300px;
 				}
 			}
+		}
+		&>.lunch,
+		&>.dinner,
+		&>.sweets {
+			display: none;
 		}
 	}
 }

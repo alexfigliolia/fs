@@ -5,6 +5,7 @@ class Clients extends Component {
     super(props);
     this.state = {
       "paths" : [
+        "pan.jpg",
         "clients/pb.png",
         "clients/hardrock.png",
         "clients/coachella.png",
@@ -46,7 +47,7 @@ class Clients extends Component {
     }
   }
   componentDidMount(){
-    if(this.state.paths.length > 36) {
+    if(this.state.paths.length > 37) {
       var i = 0;
       for(var ref in this.refs) {
         this.refs[ref].src = this.state.paths[i];
@@ -61,7 +62,13 @@ class Clients extends Component {
     return (
       <div className="clients" id='clients'>
         <div>
-          <h1>//Our Clientelle</h1>
+          <div className='bnr'>
+            <img ref='first' alt='food steez' />
+            <h1>//Clients</h1>
+          </div>
+          <div className='scroll'>
+            <button id='cb' onClick={this.props.scroll}></button>
+          </div>
           <div className='client-grid'>
             <div>
               <img ref="img0" alt="Food Steez client" />
