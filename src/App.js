@@ -20,7 +20,7 @@ class App extends Component {
       "menuClasses" : "menu",
       "menuToggle" : true,
       "loaderClasses" : "loader",
-      "page" : "Home"
+      "page" : "Recipes"
     }
   }
 	

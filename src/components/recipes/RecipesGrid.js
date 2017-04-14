@@ -37,70 +37,66 @@ class RecipesGrid extends Component {
   render() {
     return (
       <div className="recipes-grid" id='recipesGrid'>
-      	<h1>Breakfast</h1>
       	<div className="video-grid">
-      	  <div className="video">
+      	  <div className="video breakfast">
       	  	<h2>Bacon Wrapped Burrito</h2>
       	  	<iframe ref="frame0" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video breakfast">
       	  	<h2>Pancake Taco</h2>
       	  	<iframe ref="frame1" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video breakfast">
       	  	<h2>Thanksgiving Breakfast Burrito</h2>
       	  	<iframe ref="frame2" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video breakfast">
       	  	<h2>Bacon-Nutella Pancakes</h2>
       	  	<iframe ref="frame3" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
-      	<h1>Lunch</h1>
       	<div className="video-grid">
-      	  <div className="video">
+      	  <div className="video lunch">
       	  	<h2>Sunday bbq Recipes</h2>
       	  	<iframe ref="frame4" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video lunch">
       	  	<h2>Cheetos Crusted Moz Sticks</h2>
       	  	<iframe ref="frame5" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video lunch">
       	  	<h2>French Onion Grilled Cheese</h2>
       	  	<iframe ref="frame6" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video lunch">
       	  	<h2>Thanksgiving Grilled Cheese</h2>
       	  	<iframe ref="frame7" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
-      	<h1>Dinner</h1>
       	<div className="video-grid">
-      	  <div className="video">
+      	  <div className="video dinner">
       	  	<h2>Taco Pizza</h2>
       	  	<iframe ref="frame8" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video dinner">
       	  	<h2>Bacon Wrapped, Cheese Stuffed Burger</h2>
       	  	<iframe ref="frame9" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
-      	<h1>Sweets</h1>
       	<div className="video-grid">
-      	  <div className="video">
+      	  <div className="video sweets">
       	  	<h2>Strawberry Crisp</h2>
       	  	<iframe ref="frame10" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video sweets">
       	  	<h2>Red Velvet Crepes</h2>
       	  	<iframe ref="frame11" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video sweets">
       	  	<h2>No-Bake Truffles</h2>
       	  	<iframe ref="frame12" frameBorder="0" allowFullScreen></iframe>
       	  </div>
-      	  <div className="video">
+      	  <div className="video sweets">
       	  	<h2>Cold Brew Creme Brulee</h2>
       	  	<iframe ref="frame13" frameBorder="0" allowFullScreen></iframe>
       	  </div>
