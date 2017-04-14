@@ -60,7 +60,9 @@
 			text-align: center;
 		}
 		&>h2 {
-			text-align: center;
+			@media #{$mq-550}{
+				text-align: center;
+			}
 		}
 	}
 	&>.make p {

@@ -2036,8 +2036,9 @@ footer > div > .logo > p {
   .recipe > .instructions {
     text-align: center; } }
 
-.recipe > .instructions > h2 {
-  text-align: center; }
+@media (min-width: 550px) {
+  .recipe > .instructions > h2 {
+    text-align: center; } }
 
 .recipe > .make p {
   line-height: 2; }
