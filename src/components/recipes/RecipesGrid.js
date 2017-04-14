@@ -39,65 +39,65 @@ class RecipesGrid extends Component {
       <div className="recipes-grid" id='recipesGrid'>
       	<div className="video-grid">
       	  <div className="video breakfast">
-      	  	<h2>Bacon Wrapped Burrito</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Bacon Wrapped Burrito</h2>
       	  	<iframe ref="frame0" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2>Pancake Taco</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Pancake Taco</h2>
       	  	<iframe ref="frame1" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2>Thanksgiving Breakfast Burrito</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Thanksgiving Breakfast Burrito</h2>
       	  	<iframe ref="frame2" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2>Bacon-Nutella Pancakes</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Bacon-Nutella Pancakes</h2>
       	  	<iframe ref="frame3" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
       	<div className="video-grid">
       	  <div className="video lunch">
-      	  	<h2>Sunday bbq Recipes</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Sunday bbq Recipes</h2>
       	  	<iframe ref="frame4" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video lunch">
-      	  	<h2>Cheetos Crusted Moz Sticks</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Cheetos Crusted Moz Sticks</h2>
       	  	<iframe ref="frame5" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video lunch">
-      	  	<h2>French Onion Grilled Cheese</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>French Onion Grilled Cheese</h2>
       	  	<iframe ref="frame6" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video lunch">
-      	  	<h2>Thanksgiving Grilled Cheese</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Thanksgiving Grilled Cheese</h2>
       	  	<iframe ref="frame7" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
       	<div className="video-grid">
       	  <div className="video dinner">
-      	  	<h2>Taco Pizza</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Taco Pizza</h2>
       	  	<iframe ref="frame8" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video dinner">
-      	  	<h2>Bacon Wrapped, Cheese Stuffed Burger</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Bacon Wrapped, Cheese Stuffed Burger</h2>
       	  	<iframe ref="frame9" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>
       	<div className="video-grid">
       	  <div className="video sweets">
-      	  	<h2>Strawberry Crisp</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Strawberry Crisp</h2>
       	  	<iframe ref="frame10" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video sweets">
-      	  	<h2>Red Velvet Crepes</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Red Velvet Crepes</h2>
       	  	<iframe ref="frame11" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video sweets">
-      	  	<h2>No-Bake Truffles</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>No-Bake Truffles</h2>
       	  	<iframe ref="frame12" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video sweets">
-      	  	<h2>Cold Brew Creme Brulee</h2>
+      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Cold Brew Creme Brulee</h2>
       	  	<iframe ref="frame13" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>

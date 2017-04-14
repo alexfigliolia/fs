@@ -32,7 +32,7 @@ class Recipes extends Component {
           <button onClick={this.handleTabs.bind(this)} className="tab" data-text="Dinner"></button>
           <button onClick={this.handleTabs.bind(this)} className="tab" data-text="Sweets"></button>
         </div>
-        <RecipesGrid />
+        <RecipesGrid nav={this.props.nav} />
       </div>
     );
   }

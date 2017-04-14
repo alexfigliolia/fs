@@ -9,6 +9,7 @@ import Recipes from './components/recipes/Recipes.js';
 import WhatWeDo from './components/whatWeDo/WhatWeDo.js';
 import Clients from './components/clients/Clients.js';
 import Contact from './components/contact/Contact.js';
+import Recipe from './components/recipe/Recipe.js';
 import './App.css';
 
 class App extends Component {
@@ -44,6 +45,17 @@ class App extends Component {
         self.handleHeaderScroll();
       });
     }
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 956){
+        window.addEventListener('scroll', function(){
+          self.handleHeaderScroll();
+        });
+      } else {
+        window.removeEventListener('scroll', function(){
+          self.handleHeaderScroll();
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
@@ -163,6 +175,13 @@ class App extends Component {
       'easeOutQuad'
     );
   }
+  scrollToTop(){
+    scrollIt(
+      0,
+      300,
+      'easeOutQuad'
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -184,7 +203,12 @@ class App extends Component {
 
               : (this.state.page === "Recipes") ? 
                 <Recipes 
-                  scroll={this.recipeButtonScroll.bind(this)} /> 
+                  scroll={this.recipeButtonScroll.bind(this)}
+                  nav={this.handleNav.bind(this)} />
+
+              : (this.state.page === "Recipe") ? 
+                <Recipe
+                  scroll={this.scrollToTop.bind(this)} /> 
 
               : (this.state.page === "WhatWeDo") ? 
                 <WhatWeDo
