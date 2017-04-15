@@ -9,7 +9,10 @@ import Recipes from './components/recipes/Recipes.js';
 import WhatWeDo from './components/whatWeDo/WhatWeDo.js';
 import Clients from './components/clients/Clients.js';
 import Contact from './components/contact/Contact.js';
-import Recipe from './components/recipe/Recipe.js';
+import BWBurrito from './components/recipe/BWBurrito.js';
+import PancakeTaco from './components/recipe/PancakeTaco.js';
+import BNPancakes from './components/recipe/BNPancakes.js';
+import Oops from './components/recipe/Oops.js';
 import './App.css';
 
 class App extends Component {
@@ -206,8 +209,20 @@ class App extends Component {
                   scroll={this.recipeButtonScroll.bind(this)}
                   nav={this.handleNav.bind(this)} />
 
-              : (this.state.page === "Recipe") ? 
-                <Recipe
+              : (this.state.page === "BWBurrito") ? 
+                <BWBurrito
+                  scroll={this.scrollToTop.bind(this)} /> 
+
+              : (this.state.page === "PancakeTaco") ? 
+                <PancakeTaco
+                  scroll={this.scrollToTop.bind(this)} /> 
+
+              : (this.state.page === "BNPancakes") ? 
+                <BNPancakes
+                  scroll={this.scrollToTop.bind(this)} /> 
+
+              : (this.state.page === "Oops") ? 
+                <Oops
                   scroll={this.scrollToTop.bind(this)} /> 
 
               : (this.state.page === "WhatWeDo") ? 

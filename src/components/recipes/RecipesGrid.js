@@ -39,19 +39,19 @@ class RecipesGrid extends Component {
       <div className="recipes-grid" id='recipesGrid'>
       	<div className="video-grid">
       	  <div className="video breakfast">
-      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Bacon Wrapped Burrito</h2>
+      	  	<h2 data-page='BWBurrito' onClick={this.props.nav}>Bacon Wrapped Burrito</h2>
       	  	<iframe ref="frame0" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Pancake Taco</h2>
+      	  	<h2 data-page='PancakeTaco' onClick={this.props.nav}>Pancake Taco</h2>
       	  	<iframe ref="frame1" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Thanksgiving Breakfast Burrito</h2>
+      	  	<h2 data-page='Oops' onClick={this.props.nav}>Thanksgiving Breakfast Burrito</h2>
       	  	<iframe ref="frame2" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2 data-page='Recipe' onClick={this.props.nav}>Bacon-Nutella Pancakes</h2>
+      	  	<h2 data-page='BNPancakes' onClick={this.props.nav}>Bacon-Nutella Pancakes</h2>
       	  	<iframe ref="frame3" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	</div>

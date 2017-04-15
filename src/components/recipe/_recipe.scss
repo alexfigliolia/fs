@@ -87,3 +87,23 @@
 
 	}
 }
+
+.oops {
+	height: 100vh;
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+	@include center;
+	&>div{
+		@include center;
+		flex-direction: column;
+		max-width: 500px;
+		&>h1 {
+			letter-spacing: 4px;
+			margin: 0;
+		}
+		&>p {
+			line-height: 1.5;
+			letter-spacing: 1px;
+		}
+	}
+}
