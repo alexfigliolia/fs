@@ -59,9 +59,6 @@ class BWBurrito extends Component {
           <p>7. To Build: Heat up one large flour tortilla. Place down egg scramble followed by salsa and sliced steak. Fold burrito tight and carefully.</p>
           
         </div>
-        <div className="scroll-up">
-          <button onClick={this.props.scroll}></button>
-        </div>
       </div>
     );
   }

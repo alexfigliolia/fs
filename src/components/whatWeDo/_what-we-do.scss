@@ -112,12 +112,6 @@
 					margin-bottom: auto;
 				}
 			}
-			&>p:last-of-type {
-				margin-bottom: 30px;
-				@media #{$mq-800} {
-					margin-bottom: 0;
-				}
-			}
 		}
 		&>.grid-img img {
 			width: 100%;

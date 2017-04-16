@@ -4,7 +4,6 @@
 	margin-top: 75px;
 	width: 100%;
 	font-family: "Work Sans", sans-serif;
-	margin-bottom: 40px;
 	@media #{$mq-670}{
 		margin-top: 150px;
 	}
@@ -72,31 +71,18 @@
 		margin-bottom: 30px;
 		max-width: 850px;
 	}
-	&>.scroll-up {
-		@include center;
-		width: 100%;
-		&>button {
-			height: 50px;
-			width: 50px;
-			border: none;
-			outline: none;
-			background: url('../public/up.svg') no-repeat center;
-			background-size: contain;
-			animation: jump 1.5s infinite;
-		}
-
-	}
 }
 
 .oops {
-	height: 100vh;
+	height: 80vh;
 	width: 100%;
 	font-family: "Roboto", sans-serif;
 	@include center;
 	&>div{
 		@include center;
 		flex-direction: column;
-		max-width: 500px;
+		max-width: 600px;
+		width: 90%;
 		&>h1 {
 			letter-spacing: 4px;
 			margin: 0;

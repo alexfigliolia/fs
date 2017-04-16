@@ -47,7 +47,7 @@ class RecipesGrid extends Component {
       	  	<iframe ref="frame1" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">
-      	  	<h2 data-page='Oops' onClick={this.props.nav}>Thanksgiving Breakfast Burrito</h2>
+      	  	<h2 data-page='TBBurrito' onClick={this.props.nav}>Thanksgiving Breakfast Burrito</h2>
       	  	<iframe ref="frame2" frameBorder="0" allowFullScreen></iframe>
       	  </div>
       	  <div className="video breakfast">

@@ -37,9 +37,6 @@ class BNPancakes extends Component {
           <p>4. Cooking time is approximately 2 minutes per side. When bubbles start to appear along the edges lift up edge to see if bottom is golden brown. Once golden brown, gently flip and cook until other side is golden brown. Repeat about 5-6 times until all remaining batter is used.</p>
           <p>5. Serve warm with maple syrup and sliced strawberries.</p>
         </div>
-        <div className="scroll-up">
-          <button onClick={this.props.scroll}></button>
-        </div>
       </div>
     );
   }

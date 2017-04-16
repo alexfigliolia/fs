@@ -1163,6 +1163,23 @@ $scale: 0.8; // icon scale 68/68 default
   .img-grid > .vid-grid > .video > iframe {
     height: 270px; } }
 
+.scroll-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px; }
+
+.scroll-up > button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  background: url("../public/up.svg") no-repeat center;
+  background-size: contain;
+  animation: jump 1.5s infinite; }
+
 footer {
   width: 100%;
   background: url("../public/ep_naturalblack.png") repeat center;
@@ -1353,9 +1370,6 @@ footer > div > .logo > p {
 
 .menu-show > div > div > .youtube {
   transition-delay: 0.2s; }
-
-.recipes {
-  margin-bottom: 50px; }
 
 .recipes-banner {
   width: 100%;
@@ -1741,13 +1755,6 @@ footer > div > .logo > p {
     margin-top: 0.5em;
     margin-bottom: auto; } }
 
-.what-we-do > .info-grid > .grid-item > p:last-of-type {
-  margin-bottom: 30px; }
-
-@media (min-width: 800px) {
-  .what-we-do > .info-grid > .grid-item > p:last-of-type {
-    margin-bottom: 0; } }
-
 .what-we-do > .info-grid > .grid-img img {
   width: 100%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
@@ -1971,8 +1978,7 @@ footer > div > .logo > p {
   flex-direction: column;
   margin-top: 75px;
   width: 100%;
-  font-family: "Work Sans", sans-serif;
-  margin-bottom: 40px; }
+  font-family: "Work Sans", sans-serif; }
 
 @media (min-width: 670px) {
   .recipe {
@@ -2047,23 +2053,8 @@ footer > div > .logo > p {
   margin-bottom: 30px;
   max-width: 850px; }
 
-.recipe > .scroll-up {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; }
-
-.recipe > .scroll-up > button {
-  height: 50px;
-  width: 50px;
-  border: none;
-  outline: none;
-  background: url("../public/up.svg") no-repeat center;
-  background-size: contain;
-  animation: jump 1.5s infinite; }
-
 .oops {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -2075,7 +2066,8 @@ footer > div > .logo > p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 500px; }
+  max-width: 600px;
+  width: 90%; }
 
 .oops > div > h1 {
   letter-spacing: 4px;

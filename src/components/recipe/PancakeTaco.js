@@ -36,9 +36,6 @@ class PancakeTaco extends Component {
           <p>8. Fry your eggs. Season with salt and pepper.</p>
           <p>9. Add a slice of cheese to the inside of your pancakes, then add the bacon and eggs.</p>
         </div>
-        <div className="scroll-up">
-          <button onClick={this.props.scroll}></button>
-        </div>
       </div>
     );
   }
