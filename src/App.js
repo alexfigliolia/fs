@@ -38,17 +38,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    history.pushState(this.state.page, null, '/');
+    // history.pushState(this.state.page, null, '/');
     var self = this;
     setTimeout(function(){
       self.setState({
         "loaderClasses" : "loader loader-hide"
       });
     }, 500);
-    window.addEventListener('popstate', function(e) {
-      var p = e.state;
-      self.handleBackButton(p);
-    });
+    // window.addEventListener('popstate', function(e) {
+    //   var p = e.state;
+    //   self.handleBackButton(p);
+    // });
     if(window.innerWidth > 956){
       window.addEventListener('scroll', function(){
         self.handleHeaderScroll();
@@ -93,36 +93,36 @@ class App extends Component {
     }
   }
 
-  handleBackButton(page){
-    this.setState({
-      "loaderClasses" : "loader"
-    });
-    var p = page;
-    var l = document.getElementsByClassName('mmlink');
-    var h = document.getElementsByClassName('hlink');
-    history.pushState(p, null, p);
-    for(var i = 0; i<4; i++) {
-      l[i].classList.remove('onpage');
-      h[i].classList.remove('onpage2');
-    }
-    for(var j = 0; j<4; j++) {
-      if(l[j].dataset.page === p) {
-        l[j].classList.add('onpage');
-        h[j].classList.add('onpage2');
-      }
-    }
-    setTimeout(function(){
-      this.setState({
-        "page" : p
-      });
-      document.body.scrollTop = 0;
-    }.bind(this), 400);
-    setTimeout(function(){
-      this.setState({
-        "loaderClasses" : "loader loader-hide"
-      });
-    }.bind(this), 1000);
-  }
+  // handleBackButton(page){
+  //   this.setState({
+  //     "loaderClasses" : "loader"
+  //   });
+  //   var p = page;
+  //   var l = document.getElementsByClassName('mmlink');
+  //   var h = document.getElementsByClassName('hlink');
+  //   history.pushState(p, null, p);
+  //   for(var i = 0; i<4; i++) {
+  //     l[i].classList.remove('onpage');
+  //     h[i].classList.remove('onpage2');
+  //   }
+  //   for(var j = 0; j<4; j++) {
+  //     if(l[j].dataset.page === p) {
+  //       l[j].classList.add('onpage');
+  //       h[j].classList.add('onpage2');
+  //     }
+  //   }
+  //   setTimeout(function(){
+  //     this.setState({
+  //       "page" : p
+  //     });
+  //     document.body.scrollTop = 0;
+  //   }.bind(this), 400);
+  //   setTimeout(function(){
+  //     this.setState({
+  //       "loaderClasses" : "loader loader-hide"
+  //     });
+  //   }.bind(this), 1000);
+  // }
 
   handleNav(e){
     this.setState({
@@ -131,7 +131,7 @@ class App extends Component {
     var p = e.target.dataset.page;
     var l = document.getElementsByClassName('mmlink');
     var h = document.getElementsByClassName('hlink');
-    history.pushState(p, null, p);
+    // history.pushState(p, null, p);
     for(var i = 0; i<4; i++) {
       l[i].classList.remove('onpage');
       h[i].classList.remove('onpage2');
