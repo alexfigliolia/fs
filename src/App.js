@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    history.pushState(this.state.page, null, this.state.page);
+    history.pushState(this.state.page, null, '/');
     var self = this;
     setTimeout(function(){
       self.setState({
